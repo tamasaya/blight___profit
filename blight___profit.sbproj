@@ -1,0 +1,14 @@
+{
+  "Title": "Blight & Profit",
+  "Type": "game",
+  "Org": "local",
+  "Ident": "blight___profit",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Mounts": null,
+  "IsStandaloneOnly": false,
+  "Metadata": {}
+}
