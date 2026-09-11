@@ -2,7 +2,7 @@ using Sandbox;
 
 public sealed class SoundForPlayer : Component
 {
-	[RequireComponent] PlayerController Controller { get; set; }
+	[Property] public SoundEvent FootstepSound { get; set; }
 
 	protected override void OnUpdate()
 	{

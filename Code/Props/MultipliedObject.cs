@@ -19,13 +19,33 @@ public sealed class MultipliedObject : Component
             var loc = player.LocalPosition + Vector3.Forward * 100;
             var clone = GameObject.Clone( loc );
 
-            var modelRenderer = clone.AddComponent<BaseInventoryItem>();
-
+            var bec = clone.AddComponent<InventoryFarmItem>();
+            bec.DisplayName = "couch";
 
             // Помечаем клон как клон, чтобы он не размножался
             var cloneComponent = clone.Components.Get<MultipliedObject>();
+
+
             if ( cloneComponent != null )
                 cloneComponent._isClone = true;
+        }
+
+        if ( Input.Keyboard.Pressed( "R" ) )
+        {
+            var inventory = player.GetComponent<InventoryFarm>();
+
+            Log.Info( $"Слотов {inventory.MaxSlots}" );
+
+            for ( int i = 0; i < inventory.MaxSlots; i++ )
+            {
+                var itemsInSlot = inventory.GetSlotItems( i );
+
+                foreach ( var item in itemsInSlot )
+                {
+                    if ( item.IsValid() )
+                        Log.Info( $"Слот {i}: {item.DisplayName} {item}" );
+                }
+            }
         }
 
     }

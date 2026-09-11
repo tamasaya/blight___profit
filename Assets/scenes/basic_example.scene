@@ -313,13 +313,13 @@
           "OnComponentUpdate": null
         },
         {
-          "__type": "Sandbox.BaseInventoryComponent",
-          "__guid": "92cbe52d-cf2b-45ce-bba3-9a4de48c5581",
+          "__type": "InventoryFarm",
+          "__guid": "8e4560d5-37e5-48ee-be4d-9f6730f31cf3",
           "__enabled": true,
           "Flags": 0,
           "AutoSwitchOnEmpty": false,
           "AutoSwitchOnPickup": true,
-          "Behaviour": "Hotbar",
+          "Behaviour": "Buckets",
           "GiveOnStart": true,
           "ManualPumping": false,
           "MaxSlots": 6,
@@ -1647,6 +1647,74 @@
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
+        },
+        {
+          "__type": "MultipliedObject",
+          "__guid": "419ec46c-11cc-48f6-a087-a3b4d61d7e92",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "53790e18-fc13-46dc-86ce-c990855f8edf",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "InventoryPanel",
+      "Position": "-82.5379486,-141.792084,64.0159607",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "4d9850cc-cfc3-4f94-b67d-8e9ed7bf6b1c",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": {
+            "_type": "component",
+            "component_id": "233da939-6378-40dd-af17-b2da0860f546",
+            "go": "633fa436-df01-42a2-8a30-6edbc7d3371b",
+            "component_type": "CameraComponent"
+          },
+          "Timing": "AfterPostProcess",
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.InventoryUi",
+          "__guid": "aed46512-c4d6-4300-bf63-7113a7b0a027",
+          "__enabled": true,
+          "Flags": 0,
+          "MyStringValue": "Hello World!",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
